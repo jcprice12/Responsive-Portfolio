@@ -100,19 +100,27 @@ p{
 
 .iconContainer{
 	position:relative;
+	float:left;
 	margin-right: 5px;
 	margin-left: 5px;
 }
 
 .iconsContainer{
 	position:relative;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right: auto;
+	content: "";
+  	display: table;
+  	clear: both;
 }
 
 .iconImg{
 	height: 50px;
 }
 
-.imageWrapper{
+/*.imageWrapper{
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -121,7 +129,7 @@ p{
 	margin: auto;
 	width: 100%;
 	height: 94%;
-}
+}*/
 
 .mainSection{
 	float:left;
@@ -173,11 +181,14 @@ p{
 }
 
 .myNameContainer{
+	position:relative;
+	display:table;
+	padding-left: 20px;
+	padding-right: 20px;
 	float:left;
 	background-color: #4aaaa5;
-	padding:10px 20px 10px 20px;
-	position:absolute;
-	bottom:0;
+	height:100%;
+	
 }
 
 .myNav{
@@ -204,7 +215,13 @@ p{
 	position:relative;
 }
 
+.nameWrapper{
+	display:table-cell;
+	vertical-align: middle;
+}
+
 .normalContainer{
+	position:relative;
 	left:0;
 	right:0;
 	margin-left: auto;
@@ -222,10 +239,12 @@ p{
 } 
 
 .sideSectionContainer{
+	position:relative;
 	margin:10px;
 }
 
 .sideSectionHeader{
+	text-align: center;
 	padding:10px;
 	margin-bottom:20px;
 }
@@ -283,4 +302,94 @@ p{
 	float:left;
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 980px) {
+    .myHeader{
+    	position:static;
+    }
+
+    .myHeaderContainer{
+    	position:relative;
+		width:80%;
+    }
+
+    .normalContainer{
+    	width:80%;
+    }
+
+    .mainSection{
+    	width:55%;
+    }
+
+    .sideSection{
+    	width:40%;
+    }
+
+    #profileImage{
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+    .myHeaderContainer{
+		width:90%;
+    }
+
+    .normalContainer{
+    	width:90%;
+    }
+
+    .mainSection{
+    	float:none;
+    	width:100%;
+    }
+
+    .sideSection{
+    	float:none;
+    	width:100%;
+    	margin-top: 20px;
+    }
+
+    .iconsContainer{
+    	margin-left: 0;
+    }
+
+    #profileImage{
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	.myHeader{
+		height:120px;
+	}
+
+	.myHeaderContainer{
+		width:100%;
+	}
+
+	.myNameContainer{
+		float:none;
+		width:100%;
+		padding:0;
+		height:60%;
+		text-align: center;
+	}
+
+	.myNav{
+		float:none;
+		width:100%;
+		height:40%;
+	}
+
+	.menuLink{
+		text-align: center;
+	}
+
+    #profileImage{
+		max-width: 100%;
+	}
 }
