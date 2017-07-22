@@ -45,20 +45,6 @@ p{
 	line-height: 1.8;
 }
 
-.card{
-	position:absolute;
-	width:90%;
-	height:90%;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	box-shadow: 5px 5px 10px #888;
-	background-color: #eee;
-	border-radius: 5px;
-}
-
 .cardBanner{
 	position:absolute;
 	left:0;
@@ -82,7 +68,7 @@ p{
 	bottom:0;
 	margin: auto;
 	max-width:100%;
-	max-height:100%;
+	max-height:94%;
 }
 
 .clearFix:after{
@@ -120,17 +106,6 @@ p{
 	height: 50px;
 }
 
-/*.imageWrapper{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	width: 100%;
-	height: 94%;
-}*/
-
 .mainSection{
 	float:left;
 	width:650px;
@@ -161,6 +136,30 @@ p{
     box-sizing: border-box;
 	width:100%;
 	margin: 10px 0px 10px 0px;
+}
+
+.myCard{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	margin:auto;
+	height:90%;
+	width:90%;
+	box-shadow: 5px 5px 10px #888;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
+.myCard:hover{
+	background-color: #d9d9d9;
+}
+
+.myCardWrapper{
+	position:relative;
+	width:100%;
+	height:300px;
 }
 
 .myHeader{
@@ -196,23 +195,6 @@ p{
 	margin-right: 10px;
 	display: table;
 	height:100%;
-}
-
-.myTable{
-	position:relative;
-	left: 0;
-	right: 0;
-	margin: auto;
-	width:100%;
-}
-
-.myTd{
-	position:relative;
-	height:300px;
-}
-
-.myTr{
-	position:relative;
 }
 
 .nameWrapper{
@@ -260,6 +242,8 @@ p{
 	right: 0;
 	margin: auto;
 	width:100%;
+	column-count: 2;
+	column-gap: 0px;
 }
 
 .wrap {
@@ -275,8 +259,8 @@ p{
 .myFooter{
 	background-color: #666;
 	border-top-style: solid;
-    border-top-width: 5px;
-    border-top-color: #4aaaa5;
+  border-top-width: 5px;
+  border-top-color: #4aaaa5;
 	text-align: center;
 	width:100%;
 	display:table;
@@ -305,66 +289,99 @@ p{
 }
 
 @media screen and (max-width: 980px) {
-    .myHeader{
-    	position:static;
-    }
 
-    .myHeaderContainer{
-    	position:relative;
-		width:80%;
-    }
+	.mainSection{
+  	width:55%;
+  }
 
-    .normalContainer{
-    	width:80%;
-    }
+  .myHeader{
+  	position:static;
+  }
 
-    .mainSection{
-    	width:55%;
-    }
+  .myHeaderContainer{
+  	position:relative;
+	width:80%;
+  }
 
-    .sideSection{
-    	width:40%;
-    }
+  .normalContainer{
+  	width:80%;
+  }
 
-    #profileImage{
+  .sideSection{
+  	width:40%;
+  }
+
+  .tableContainer{
+  	column-count: 1;
+  }
+
+  #profileImage{
 		max-width: 100%;
 	}
 }
 
 @media screen and (max-width: 768px) {
 
-    .myHeaderContainer{
-		width:90%;
-    }
+  .iconsContainer{
+  	margin-left: 0;
+  }
 
-    .normalContainer{
-    	width:90%;
-    }
+  .mainSection{
+  	float:none;
+  	width:100%;
+  }
 
-    .mainSection{
-    	float:none;
-    	width:100%;
-    }
+  .myHeaderContainer{
+	width:90%;
+  }
 
-    .sideSection{
-    	float:none;
-    	width:100%;
-    	margin-top: 20px;
-    }
+  .normalContainer{
+  	width:90%;
+  }
 
-    .iconsContainer{
-    	margin-left: 0;
-    }
+  .sideSection{
+  	float:none;
+  	width:100%;
+  	margin-top: 20px;
+  }
 
-    #profileImage{
+  .sideSectionHeader{
+		text-align: left;
+	}
+
+  .tableContainer{
+  	column-count: 2;
+  }
+
+  #profileImage{
 		max-width: 50%;
 	}
 }
 
 @media screen and (max-width: 640px) {
 
+	.cardImage{
+		max-width:90%;
+		max-height:94%;
+		border-radius: 4px;
+	}
+
+	.menuLink{
+		text-align: center;
+	}
+
+	.myCardWrapper{
+		left:0;
+		right:0;
+		margin-left: auto;
+		margin-right: auto;
+		width:400px;
+		height:400px;
+	}
+
 	.myHeader{
 		height:120px;
+		position:static;
 	}
 
 	.myHeaderContainer{
@@ -385,11 +402,11 @@ p{
 		height:40%;
 	}
 
-	.menuLink{
-		text-align: center;
-	}
+	.tableContainer{
+  	column-count: 1;
+  }
 
-    #profileImage{
+  #profileImage{
 		max-width: 100%;
 	}
 }
